@@ -1,0 +1,99 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+h1, .message-text {
+    font-family: 'Pacifico', cursive;
+}
+
+body {
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #ff5e62;
+    font-size: 2.5em;
+    animation: fadeIn 2s ease;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #ff5e62;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.message-section {
+    margin-top: 20px;
+}
+
+.message-text {
+    font-size: 1.2em;
+    color: #333;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+body::before {
+    content: "💖";
+    font-size: 60px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    animation: float 6s infinite ease-in-out;
+    opacity: 0.8;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-200px); }
+    100% { transform: translateY(0); }
+}
+.container::before {
+    content: "💖";
+    font-size: 60px;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    animation: float2 6s infinite ease-in-out;
+    animation-delay: 1.5s;
+    opacity: 0.8;
+}
+
+@keyframes float2 {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-200px); }
+    100% { transform: translateY(0); }
+}
+
